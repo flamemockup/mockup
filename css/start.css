@@ -1,17 +1,17 @@
-div.flame-first-jumbotron {
+div.flame-start-jumbotron {
     background: #ffffff;
     height: 100vh;
 }
 
-div.flame-first-profile {
+div.flame-start-profile {
     margin: 0% auto 5% auto;
 }
 
-a.flame-first-profile-button {
+a.flame-start-profile-button {
     width: 100%;
 }
 
-div.flame-first-header {
+div.flame-start-header {
     background: #fafafa;
     border: 1px solid white;
     height: 85vh;
@@ -21,12 +21,12 @@ div.flame-first-header {
     overflow-y: auto;
 }
 
-div.flame-first-button-container {
+div.flame-start-button-container {
     margin-top: 2%;
     float: right;
 }
 
-a.flame-first-button {
+.flame-start-button {
     width: 8em;
     margin: 4px;
 }
