@@ -60,6 +60,10 @@ div.flame-barchart-card {
     margin: 2%;
 }
 
+.flame-form {
+    margin-bottom: 4px;
+}
+
 @media print {
     .flame-assess-profile {
         display: none;
