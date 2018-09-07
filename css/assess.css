@@ -28,6 +28,12 @@ div.flame-assess-content {
     margin-top: 2%;
 }
 
+.flame-logo {
+    width: 20em !important;
+    margin-bottom: 5%;
+    display: none;
+}
+
 div.flame-assess-button-container {
     margin-top: 2%;
     float: right;
@@ -42,4 +48,38 @@ div.flame-assess-button-container {
     width: 3.5em;
     text-align: center;
     margin: 0 auto;
+}
+
+div.flame-barchart-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+div.flame-barchart-card {
+    width: 25em !important;
+    margin: 2%;
+}
+
+@media print {
+    .flame-assess-profile {
+        display: none;
+    }
+    .flame-to-print {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-top: 5%;
+        padding: 15px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .flame-logo {
+        display: inline-block;
+    }
+    .flame-assess-button-container {
+        display: none;
+    }
 }
