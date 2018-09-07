@@ -37,3 +37,9 @@ div.flame-assess-button-container {
     width: 8em;
     margin: 4px;
 }
+
+.flame-col {
+    width: 3.5em;
+    text-align: center;
+    margin: 0 auto;
+}

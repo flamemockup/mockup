@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <!-- Flame CSS -->
+    <link rel="stylesheet" href="css/assess.css">
+
+    <!-- Flame Icon -->
+    <link rel="icon" href="images/flame-icon.png">
+
+    <title>Flame</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+
+    <!-- Flame Jumbotron -->
+    <div class="jumbotron flame-assess-jumbotron">
+        <div class="row">
+            <div class="d-none d-lg-block col-lg-3">
+                <div class="card flame-assess-profile" style="width: 18rem;">
+                    <img class="card-img-top" src="images/profile-picture.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#" class="btn btn-outline-primary flame-assess-profile-button">Edit
+                                    Bio
+                                </a></li>
+                            <li class="list-group-item"><a href="#" class="btn btn-outline-primary flame-assess-profile-button">View
+                                    Profile
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-9">
+                <div class="flame-assess-header">
+                    <!-- Navigation -->
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link flame-assess-nav-item" id="nav-background-tab" data-toggle="tab" href="#nav-background" role="tab"
+                                aria-controls="nav-background" aria-selected="false">Background</a>
+                            <a class="nav-item nav-link flame-assess-nav-item active" id="nav-questionnaire-tab" data-toggle="tab" href="#nav-questionnaire"
+                                role="tab" aria-controls="nav-questionnaire" aria-selected="true">Questionnaire</a>
+                            <a class="nav-item nav-link flame-assess-nav-item disabled" id="nav-report-tab" data-toggle="tab" href="#nav-report" role="tab"
+                                aria-controls="nav-report" aria-selected="false">Report</a>
+                            <a class="nav-item nav-link flame-assess-nav-item disabled" id="nav-survey-tab" data-toggle="tab" href="#nav-survey" role="tab"
+                                aria-controls="nav-survey" aria-selected="false">
+                                Survey</a>
+                        </div>
+                    </nav>
+
+                    <!-- Content-->
+                    <div class="tab-content" id="nav-tabContent">
+
+                        <!-- Assume this content will change if the user change the role in the previous part -->
+                        <div class="tab-pane fade" id="nav-background" role="tabpanel" aria-labelledby="nav-background-tab">
+                            <div class="container-fluid flame-assess-content">
+                                <p>
+                                    Hi <em>John Doe</em>, great to see that you have chosen <em>Application Developer
+                                    </em>
+                                    as a role to develop further in. Let’s just be sure we have the same job in mind. Here’s our definition of an
+                                    <em>Application Developer</em>:<br>
+                                    <ul class="list-unstyled">
+                                        <ul>
+                                            <li>Applies subject matter knowledge in applications development </li>
+                                            <li>Possesses well-developed skills in design, development, testing, and debugging</li>
+                                            <li>Implements software applications or specialized utility programs in support
+                                                of end users' needs on platforms</li>
+                                            <li>Supports regular updates and recommends improvements to existing applications.</li>
+                                        </ul>
+                                    </ul>
+                                </p>
+                            </div>
+                            <div class="flame-assess-button-container">
+                                <a class="btn btn-outline-secondary flame-start-button" href="start.html" role="button">Restart</a
+                                        </div>
+                            </div>
+                        </div>
+
+                        <!-- The list of questions is displayed according to the role that the user choose -->
+                        <div class="tab-pane show active" id="nav-questionnaire" role="tabpanel" aria-labelledby="nav-questionnaire-tab">
+                            <div class="container-fluid flame-assess-content">
+                                <p>
+                                    Hi <em>John Doe</em>, let’s jump into this. You see a list of questions below. They involve
+                                    what an Android Developer would do. To each statement, please indicate to what extent
+                                    you do well in it. There are no right or wrong answer. It’s more useful to be honest,
+                                    so we can have an accurate profile to support your learning
+                                </p>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Task</th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">1</th>
+                                                <td>Support discussions with stakeholders to understand business needs and
+                                                    user requirements
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">2</th>
+                                                <td>Support the requirements analysis</td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">3</th>
+                                                <td>Support the formulation of specifications and definition of delivery
+                                                    platforms for applications
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">4</th>
+                                                <td>Support proposal writing for applications development
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">5</th>
+                                                <td>Support the development of the applications concept, interface design,
+                                                    and architecture
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">6</th>
+                                                <td>Support the development of program logic for new applications and features
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">7</th>
+                                                <td>Use prescribed guidelines or policies to analyse and resolve problems
+                                                    Integrate applications with back-end databases
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">8</th>
+                                                <td>Integrate applications with back-end databases
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">9</th>
+                                                <td>Support testing of the developed applications Deploy applications according
+                                                    to specifications
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">10</th>
+                                                <td>Deploy applications according to specifications
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">11</th>
+                                                <td>Investigate issues and conduct root cause analysis
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">12</th>
+                                                <td>Apply bug-fixes
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">13</th>
+                                                <td>Document implementation procedures
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">14</th>
+                                                <td>Collect user feedback and generate system report on applications performance
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">15</th>
+                                                <td>Support initiatives to improve functionality and process flow of applications
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">16</th>
+                                                <td>Support the analysis and modification of design logic in existing applications
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">17</th>
+                                                <td>Propose recommendations to improve applications performance
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">18</th>
+                                                <td>Support the integration of new products with existing applications to
+                                                    improve the functionality and/or design
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">19</th>
+                                                <td>Support the maintenance and update of an existing applications
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">20</th>
+                                                <td>Support monitoring of compliance to security measures
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">21</th>
+                                                <td>Solve routine problems that occur within applications
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <tr>
+                                            <form>
+                                                <th scope="row">22</th>
+                                                <td>Document the application’s technical architecture, code changes, issue
+                                                    resolutions and procedures
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Strongly Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">                                                            1
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Dissagree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">                                                            2
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-dark" data-toggle="tooltip" data-placement="top" title="Neutral">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">                                                            3
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-info" data-toggle="tooltip" data-placement="top" title="Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">4
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                                <td class="flame-col">
+                                                    <div class="form-check form-check-inline">
+                                                        <button type="button" class="btn btn-outline-success" data-toggle="tooltip" data-placement="top" title="Strongly Agree">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">                                                            5
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </form>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="flame-assess-button-container">
+                                <a class="btn btn-outline-secondary flame-start-button" href="start.html" role="button">Restart</a
+                                        </div>
+                                <a class="btn btn-outline-primary flame-start-button" href="assess_3.html" role="button">Next</a
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
